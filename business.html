@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mona Aslam - Build A Purpose-Driven Wellness Business</title>
+    <style>
+        /* CSS Reset & Colors */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary-blue: #000c66;
+            --btn-blue: #00008b;
+            --bg-light: #e0f2fe;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* Reusable Components */
+        .btn-apply {
+            display: inline-block;
+            background-color: var(--btn-blue);
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(0, 12, 102, 0.25);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-apply:hover {
+            transform: translateY(-2px);
+            background-color: #0000b3;
+        }
+
+        .btn-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .section-padding {
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* SECTION 1: Hero Section */
+        .hero-section {
+            background: linear-gradient(180deg, #dbeafe 0%, #eff6ff 100%);
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .hero-brand {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #000000;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+            font-weight: 500;
+        }
+
+        /* Video Container */
+        .video-container {
+            max-width: 750px;
+            margin: 0 auto 25px auto;
+            border: 6px solid #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            background: #000000;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: none;
+        }
+
+        .video-caption {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* SECTION 2: Why This Business Works */
+        .split-feature-section {
+            background-color: #ffffff;
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .split-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            object-fit: cover;
+        }
+
+        .split-content h2 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .split-content p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .bullets-list {
+            list-style: none;
+            margin: 20px 0 30px 0;
+        }
+
+        .bullets-list li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* SECTION 3: I Never Dreamed Block */
+        .reverse-split-section {
+            background: linear-gradient(180deg, #eff6ff 0%, #e0f2fe 100%);
+        }
+
+        /* SECTION 4: Plug & Play Plan */
+        .plan-section {
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .plan-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .plan-box {
+            background: #ffffff;
+            border: 2px solid #bae6fd;
+            border-radius: 8px;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            box-shadow: 0 4px 25px rgba(0,12,102,0.05);
+        }
+
+        .plan-box h3 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .plan-graphic-placeholder {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto 30px auto;
+            display: block;
+        }
+
+        .plan-footer-text {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin: 30px auto 20px auto;
+            max-width: 700px;
+        }
+
+        .plan-bullets {
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .plan-bullets li {
+            list-style: none;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub-bullet {
+            padding-left: 25px;
+            font-size: 0.9rem !important;
+            color: var(--text-muted);
+            font-weight: 400 !important;
+        }
+
+        /* SECTION 5: Why Now Three Columns */
+        .why-now-section {
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .why-now-section h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .why-now-section .subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card-item {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 30px 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-item h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* SECTION 6: Image Gallery Grid */
+        .gallery-section {
+            background: linear-gradient(180deg, #eff6ff 0%, #e0f2fe 100%);
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .gallery-section p {
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            font-size: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            border: 4px solid #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            aspect-ratio: 3 / 4;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* SECTION 7: Final Sign-Up Split Layout */
+        .footer-cta-section {
+            background-color: #ffffff;
+        }
+
+        .cta-split {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .cta-left h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .cta-left p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Embedded Navy Blue Form Panel */
+        .embedded-form-panel {
+            background-color: #03004b;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+        .form-field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-field input[type="text"],
+        .form-field input[type="email"],
+        .form-field select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .phone-input-wrapper {
+            display: flex;
+            gap: 5px;
+        }
+
+        .country-code-select {
+            width: 110px;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            font-size: 0.9rem;
+        }
+
+        .consent-checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .consent-checkbox-row input[type="checkbox"] {
+            margin-top: 3px;
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .consent-checkbox-row label {
+            font-size: 0.76rem;
+            line-height: 1.5;
+            color: #e2e8f0;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #cffafe;
+            color: #03004b;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 15px;
+        }
+
+        .form-submit-btn:hover {
+            background-color: #a5f3fc;
+        }
+
+        .form-footer-links {
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        .form-footer-links a {
+            color: #94a3b8;
+            text-decoration: underline;
+        }
+
+        /* Disclaimer Footer */
+        .disclaimer-bar {
+            background-color: #7dd3fc;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .disclaimer-bar p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            color: #0369a1;
+            line-height: 1.6;
+        }
+
+        /* Mobile Optimization Frame */
+        @media (max-width: 768px) {
+            .split-grid, .cta-split, .cards-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-section h1 { font-size: 1.8rem; }
+            .split-content h2, .cta-left h2 { font-size: 1.6rem; }
+            .section-padding { padding: 40px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section section-padding">
+        <div class="container">
+            <div class="hero-brand"> Tanzeem Akhter</div>
+            <h1>Build A Purpose-Driven Wellness Business From Home</h1>
+            <p class="subtitle">Help people feel better, share a simple health system, and create flexible income — even if you've never built a business before.</p>
+            
+            <div class="video-container">
+                <video class="video-player" controls preload="metadata">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <p class="video-caption">How I went from stay-at-home mom to building something of my own — with purpose and flexibility.</p>
+            
+            <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
+            <div class="btn-meta">No experience required • Training and mentorship included</div>
+        </div>
+    </section>
+
+    <section class="split-feature-section section-padding">
+        <div class="container">
+            <div class="split-grid">
+                <div class="split-image">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600" alt="Mona Aslam Portrait">
+                </div>
+                <div class="split-content">
+                    <h2>Why This Business Works</h2>
+                    <p>We're living in a health crisis. Nearly everyone is dealing with gut issues, low energy, hormonal imbalance, or metabolic problems — and they're actively searching for solutions that feel simple and natural.</p>
+                    <p>This business works because you're not selling hype. You're sharing education and a proven, food-based system that people can actually stick with.</p>
+                    <p>The company handles manufacturing, shipping, and customer support. You focus on helping people get started and supported.</p>
+                    
+                    <ul class="bullets-list">
+                        <li>👉 No inventory or overhead</li>
+                        <li>👉 No employees</li>
+                        <li>👉 No medical background needed</li>
+                        <li>👉 Run from your phone or laptop</li>
+                    </ul>
+                    
+                    <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
+                    <div class="btn-meta">No experience required • Training and mentorship included</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reverse-split-section section-padding">
+        <div class="container">
+            <div class="split-grid">
+                <div class="split-content">
+                    <h2>I Never Dreamed Of Being An Entrepreneur - I Just Wanted To Feel Better</h2>
+                    <p>When I joined this business, I thought I'd only help a few people. But very quickly, I realized how many people around me were struggling with their health.</p>
+                    <p>As a stay-at-home mom, I always wanted to do something of my own — something meaningful. This gave me purpose, direction, and a mission.</p>
+                    
+                    <ul class="bullets-list">
+                        <li>👉 A sense of purpose and impact</li>
+                        <li>👉 Personal growth and confidence</li>
+                        <li>👉 Financial independence</li>
+                        <li>👉 The ability to help others daily</li>
+                        <li>👉 Flexibility to work around my life</li>
+                    </ul>
+                    
+                    <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
+                    <div class="btn-meta">No experience required • Training and mentorship included</div>
+                </div>
+                <div class="split-image">
+                    <img src="https://images.unsplash.com/photo-1580894732444-8fecef2271ff?q=80&w=600" alt="Mona Aslam at Event">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plan-section section-padding">
+        <div class="container">
+            <div class="plan-box">
+                <h3>The Plug & Play Plan</h3>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" alt="The Plug & Play Plan Resources" class="plan-graphic-placeholder">
+                
+                <p class="plan-footer-text">You'll be shown exactly how to share, support, and grow step-by-step with guidance.</p>
+                
+                <ul class="plan-bullets">
+                    <li>👉 Training and mentorship</li>
+                    <li>👉 A proven sharing system</li>
+                    <li>👉 Educational tools and resources</li>
+                    <li>👉 Community support</li>
+                    <li>👉 Ongoing guidance as you grow</li>
+                    <li>👉 A clear path for beginners</li>
+                    <li class="sub-bullet">You don't have to be perfect — just willing to learn.</li>
+                </ul>
+                
+                <br><br>
+                <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
+                <div class="btn-meta">No experience required • Training and mentorship included</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-now-section section-padding">
+        <div class="container">
+            <h2>Why Now</h2>
+            <p class="subtitle">Three major shifts are creating the perfect moment to start — and you can leverage all of them today.</p>
+            
+            <div class="cards-grid">
+                <div class="card-item">
+                    <span class="card-icon">🩺</span>
+                    <h3>Health Crisis</h3>
+                    <p>93% of adults are metabolically unhealthy and actively searching for real, natural solutions they can maintain.</p>
+                </div>
+                <div class="card-item">
+                    <span class="card-icon">📊</span>
+                    <h3>Economic Crisis</h3>
+                    <p>Rising costs and shrinking job security make flexible income more important than ever.</p>
+                </div>
+                <div class="card-item">
+                    <span class="card-icon">💻</span>
+                    <h3>Technology Shift</h3>
+                    <p>Digital systems and automation allow you to build without starting from scratch.</p>
+                </div>
+            </div>
+            
+            <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
+            <div class="btn-meta">No experience required • Training and mentorship included</div>
+        </div>
+    </section>
+
+    <section class="gallery-section section-padding">
+        <div class="container">
+            <h2>What This Business Has Made Possible</h2>
+            <p>This business gave me more than income — it gave me confidence, purpose, and the ability to help people every day while building something of my own.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=400" alt="Community 1"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=400" alt="Community 2"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400" alt="Community 3"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400" alt="Community 4"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=400" alt="Community 5"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=400" alt="Community 6"></div>
+            </div>
+            
+            <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
+            <div class="btn-meta">No experience required • Training and mentorship included</div>
+        </div>
+    </section>
+
+    <section class="footer-cta-section section-padding" id="form-gEkWiWcW4K">
+        <div class="container">
+            <div class="cta-split">
+                <div class="cta-left">
+                    <h2>Ready To Build Freedom Helping People Get Healthy?</h2>
+                    <p>If you've been wanting something meaningful — something that helps others and helps you grow — this could be your next step.</p>
+                    <p>No pressure. No hard selling. Just a real conversation.</p>
+                    
+                    <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
+                    <div class="btn-meta">No experience required • Training and mentorship included</div>
+                </div>
+                
+                <div class="embedded-form-panel">
+                    <form action="https://healthmona.com/business#form-gEkWiWcW4K" method="POST">
+                        <div class="form-field">
+                            <label>Full Name *</label>
+                            <input type="text" name="fullName" placeholder="Full Name" required>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>Phone *</label>
+                            <div class="phone-input-wrapper">
+                                <select class="country-code-select" id="formPhoneCode" name="countryCode" required>
+                                    </select>
+                                <input type="text" name="phone" placeholder="Phone Number" style="flex-grow:1;" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>Email *</label>
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>Country *</label>
+                            <select id="formCountryList" name="country" required>
+                                </select>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label>Why are you interested in starting your own wellness franchise with Mona Aslam?</label>
+                            <input type="text" name="reason" placeholder="Answer">
+                        </div>
+                        
+                        <div class="consent-checkbox-row">
+                            <input type="checkbox" id="consent1" required>
+                            <label for="consent1">By checking this box, I consent to receive transactional messages from Mona Aslam related to my account, orders, or services I have requested...</label>
+                        </div>
+                        
+                        <div class="consent-checkbox-row">
+                            <input type="checkbox" id="consent2">
+                            <label for="consent2">By checking this box, I consent to receive marketing and promotional messages, including special offers, discounts, new product updates among others...</label>
+                        </div>
+                        
+                        <button type="submit" class="form-submit-btn">Apply Now →</button>
+                        
+                        <div class="form-footer-links">
+                            <a href="#">Privacy Policy</a> | <a href="#">Terms Of Service</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="disclaimer-bar">
+        <p><strong>Disclaimer:</strong> This page is for educational purposes only and is not medical advice. Individual results vary. Always consult your healthcare provider before making changes to your routine.</p>
+    </footer>
+
+    <script>
+        // 1. Smooth Scrolling Script
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 2. Global Dataset containing all countries
+        const globalCountries = [
+            { name: "Afghanistan", code: "+93", flag: "🇦🇫" }, { name: "Albania", code: "+355", flag: "🇦🇱" },
+            { name: "Algeria", code: "+213", flag: "🇩🇿" }, { name: "Andorra", code: "+376", flag: "🇦🇩" },
+            { name: "Angola", code: "+244", flag: "🇦🇴" }, { name: "Argentina", code: "+54", flag: "🇦🇷" },
+            { name: "Armenia", code: "+374", flag: "🇦🇲" }, { name: "Australia", code: "+61", flag: "🇦🇺" },
+            { name: "Austria", code: "+43", flag: "🇦🇹" }, { name: "Azerbaijan", code: "+994", flag: "🇦🇿" },
+            { name: "Bahamas", code: "+1-242", flag: "🇧🇸" }, { name: "Bahrain", code: "+973", flag: "🇧🇭" },
+            { name: "Bangladesh", code: "+880", flag: "🇧🇩" }, { name: "Barbados", code: "+1-246", flag: "🇧🇧" },
+            { name: "Belarus", code: "+375", flag: "🇧🇾" }, { name: "Belgium", code: "+32", flag: "🇧🇪" },
+            { name: "Belize", code: "+501", flag: "🇧🇿" }, { name: "Benin", code: "+229", flag: "🇧🇯" },
+            { name: "Bhutan", code: "+975", flag: "🇧🇹" }, { name: "Bolivia", code: "+591", flag: "🇧🇴" },
+            { name: "Bosnia and Herzegovina", code: "+387", flag: "🇧🇦" }, { name: "Botswana", code: "+267", flag: "🇧🇼" },
+            { name: "Brazil", code: "+55", flag: "🇧🇷" }, { name: "Brunei", code: "+673", flag: "🇧🇳" },
+            { name: "Bulgaria", code: "+359", flag: "🇧🇬" }, { name: "Burkina Faso", code: "+226", flag: "🇧🇫" },
+            { name: "Burundi", code: "+257", flag: "🇧🇮" }, { name: "Cambodia", code: "+855", flag: "🇰🇭" },
+            { name: "Cameroon", code: "+237", flag: "🇨🇲" }, { name: "Canada", code: "+1", flag: "🇨🇦" },
+            { name: "Cape Verde", code: "+238", flag: "🇨🇻" }, { name: "Central African Republic", code: "+236", flag: "🇨🇫" },
+            { name: "Chad", code: "+235", flag: "🇹🇩" }, { name: "Chile", code: "+56", flag: "🇨🇱" },
+            { name: "China", code: "+86", flag: "🇨🇳" }, { name: "Colombia", code: "+57", flag: "🇨🇴" },
+            { name: "Comoros", code: "+269", flag: "🇰🇲" }, { name: "Congo", code: "+242", flag: "🇨🇬" },
+            { name: "Costa Rica", code: "+506", flag: "🇨🇷" }, { name: "Croatia", code: "+385", flag: "🇭🇷" },
+            { name: "Cuba", code: "+53", flag: "🇨🇺" }, { name: "Cyprus", code: "+357", flag: "🇨🇾" },
+            { name: "Czech Republic", code: "+420", flag: "🇨🇿" }, { name: "Denmark", code: "+45", flag: "🇩🇰" },
+            { name: "Djibouti", code: "+253", flag: "🇩🇯" }, { name: "Dominica", code: "+1-767", flag: "🇩🇲" },
+            { name: "Dominican Republic", code: "+1-809", flag: "🇩🇴" }, { name: "Ecuador", code: "+593", flag: "🇪🇨" },
+            { name: "Egypt", code: "+20", flag: "🇪🇬" }, { name: "El Salvador", code: "+503", flag: "🇸🇻" },
+            { name: "Equatorial Guinea", code: "+240", flag: "🇬🇶" }, { name: "Eritrea", code: "+291", flag: "🇪🇷" },
+            { name: "Estonia", code: "+372", flag: "🇪🇪" }, { name: "Ethiopia", code: "+251", flag: "🇪🇹" },
+            { name: "Fiji", code: "+679", flag: "🇫🇯" }, { name: "Finland", code: "+358", flag: "🇫🇮" },
+            { name: "France", code: "+33", flag: "🇫🇷" }, { name: "Gabon", code: "+241", flag: "🇬🇦" },
+            { name: "Gambia", code: "+220", flag: "🇬🇲" }, { name: "Georgia", code: "+995", flag: "🇬🇪" },
+            { name: "Germany", code: "+49", flag: "🇩🇪" }, { name: "Ghana", code: "+233", flag: "🇬🇭" },
+            { name: "Greece", code: "+30", flag: "🇬🇷" }, { name: "Grenada", code: "+1-473", flag: "🇬🇩" },
+            { name: "Guatemala", code: "+502", flag: "🇬🇹" }, { name: "Guinea", code: "+224", flag: "🇬🇳" },
+            { name: "Guyana", code: "+592", flag: "🇬🇾" }, { name: "Haiti", code: "+509", flag: "🇭🇹" },
+            { name: "Honduras", code: "+504", flag: "🇭🇳" }, { name: "Hungary", code: "+36", flag: "🇭🇺" },
+            { name: "Iceland", code: "+354", flag: "🇮🇸" }, { name: "India", code: "+91", flag: "🇮🇳" },
+            { name: "Indonesia", code: "+62", flag: "🇮🇩" }, { name: "Iran", code: "+98", flag: "🇮🇷" },
+            { name: "Iraq", code: "+964", flag: "🇮🇶" }, { name: "Ireland", code: "+353", flag: "🇮🇪" },
+            { name: "Italy", code: "+39", flag: "🇮🇹" }, { name: "Jamaica", code: "+1-876", flag: "🇯🇲" },
+            { name: "Japan", code: "+81", flag: "🇯🇵" }, { name: "Jordan", code: "+962", flag: "🇯🇴" },
+            { name: "Kazakhstan", code: "+7", flag: "🇰🇿" }, { name: "Kenya", code: "+254", flag: "🇰🇪" },
+            { name: "Kuwait", code: "+965", flag: "🇰🇼" }, { name: "Kyrgyzstan", code: "+996", flag: "🇰🇬" },
+            { name: "Laos", code: "+856", flag: "🇱🇦" }, { name: "Latvia", code: "+371", flag: "🇱🇻" },
+            { name: "Lebanon", code: "+961", flag: "🇱🇧" }, { name: "Lesotho", code: "+266", flag: "🇱🇸" },
+            { name: "Liberia", code: "+231", flag: "🇱🇷" }, { name: "Libya", code: "+218", flag: "🇱🇾" },
+            { name: "Liechtenstein", code: "+423", flag: "🇱🇮" }, { name: "Lithuania", code: "+370", flag: "🇱🇹" },
+            { name: "Luxembourg", code: "+352", flag: "🇱🇺" }, { name: "Madagascar", code: "+261", flag: "🇲🇬" },
+            { name: "Malawi", code: "+265", flag: "🇲🇼" }, { name: "Malaysia", code: "+60", flag: "🇲🇾" },
+            { name: "Maldives", code: "+960", flag: "🇲🇻" }, { name: "Mali", code: "+223", flag: "🇲🇱" },
+            { name: "Malta", code: "+356", flag: "🇲🇹" }, { name: "Mauritania", code: "+222", flag: "🇲🇷" },
+            { name: "Mauritius", code: "+230", flag: "🇲🇺" }, { name: "Mexico", code: "+52", flag: "🇲🇽" },
+            { name: "Moldova", code: "+373", flag: "🇲🇩" }, { name: "Monaco", code: "+377", flag: "🇲🇨" },
+            { name: "Mongolia", code: "+976", flag: "🇲🇳" }, { name: "Montenegro", code: "+382", flag: "🇲🇪" },
+            { name: "Morocco", code: "+212", flag: "🇲🇦" }, { name: "Mozambique", code: "+258", flag: "🇲🇿" },
+            { name: "Myanmar", code: "+95", flag: "🇲🇲" }, { name: "Namibia", code: "+264", flag: "🇳🇦" },
+            { name: "Nepal", code: "+977", flag: "🇳🇵" }, { name: "Netherlands", code: "+31", flag: "🇳🇱" },
+            { name: "New Zealand", code: "+64", flag: "🇳🇿" }, { name: "Nicaragua", code: "+505", flag: "🇳🇮" },
+            { name: "Niger", code: "+227", flag: "🇳🇪" }, { name: "Nigeria", code: "+234", flag: "🇳🇬" },
+            { name: "Norway", code: "+47", flag: "🇳🇴" }, { name: "Oman", code: "+968", flag: "🇴🇲" },
+            { name: "Pakistan", code: "+92", flag: "🇵🇰" }, { name: "Panama", code: "+507", flag: "🇵🇦" },
+            { name: "Papua New Guinea", code: "+675", flag: "🇵🇬" }, { name: "Paraguay", code: "+595", flag: "🇵🇾" },
+            { name: "Peru", code: "+51", flag: "🇵🇪" }, { name: "Philippines", code: "+63", flag: "🇵🇭" },
+            { name: "Poland", code: "+48", flag: "🇵🇱" }, { name: "Portugal", code: "+351", flag: "🇵🇹" },
+            { name: "Qatar", code: "+974", flag: "🇶🇦" }, { name: "Romania", code: "+40", flag: "🇷🇴" },
+            { name: "Russia", code: "+7", flag: "🇷🇺" }, { name: "Rwanda", code: "+250", flag: "🇷🇼" },
+            { name: "Saudi Arabia", code: "+966", flag: "🇸🇦" }, { name: "Senegal", code: "+221", flag: "🇸🇳" },
+            { name: "Serbia", code: "+381", flag: "🇷🇸" }, { name: "Seychelles", code: "+248", flag: "🇸🇨" },
+            { name: "Singapore", code: "+65", flag: "🇸🇬" }, { name: "Slovakia", code: "+421", flag: "🇸🇰" },
+            { name: "Slovenia", code: "+386", flag: "🇸🇮" }, { name: "Somalia", code: "+252", flag: "🇸🇴" },
+            { name: "South Africa", code: "+27", flag: "🇿🇦" }, { name: "Spain", code: "+34", flag: "🇪🇸" },
+            { name: "Sri Lanka", code: "+94", flag: "🇱🇰" }, { name: "Sudan", code: "+249", flag: "🇸🇩" },
+            { name: "Sweden", code: "+46", flag: "🇸🇪" }, { name: "Switzerland", code: "+41", flag: "🇨🇭" },
+            { name: "Syria", code: "+963", flag: "🇸🇾" }, { name: "Taiwan", code: "+886", flag: "🇹🇼" },
+            { name: "Tajikistan", code: "+992", flag: "🇹🇯" }, { name: "Tanzania", code: "+255", flag: "🇹🇿" },
+            { name: "Thailand", code: "+66", flag: "🇹🇭" }, { name: "Tunisia", code: "+216", flag: "🇹🇳" },
+            { name: "Turkey", code: "+90", flag: "🇹🇷" }, { name: "Uganda", code: "+256", flag: "🇺🇬" },
+            { name: "Ukraine", code: "+380", flag: "🇺🇦" }, { name: "United Arab Emirates", code: "+971", flag: "🇦🇪" },
+            { name: "United Kingdom", code: "+44", flag: "🇬🇧" }, { name: "United States", code: "+1", flag: "🇺🇸" },
+            { name: "Uruguay", code: "+598", flag: "🇺🇾" }, { name: "Uzbekistan", code: "+998", flag: "🇺🇿" },
+            { name: "Venezuela", code: "+58", flag: "🇻🇪" }, { name: "Vietnam", code: "+84", flag: "🇻🇳" },
+            { name: "Yemen", code: "+967", flag: "🇾🇪" }, { name: "Zambia", code: "+260", flag: "🇿🇲" },
+            { name: "Zimbabwe", code: "+263", flag: "🇿🇼" }
+        ];
+
+        // 3. Injecting data instantly
+        const codeDropdown = document.getElementById('formPhoneCode');
+        const countryDropdown = document.getElementById('formCountryList');
+
+        codeDropdown.innerHTML = '';
+        countryDropdown.innerHTML = '<option value="" disabled selected>Select your country</option>';
+
+        globalCountries.forEach(item => {
+            let codeOpt = document.createElement('option');
+            codeOpt.value = item.code;
+            codeOpt.textContent = `${item.flag} ${item.code}`;
+            if(item.name === "Pakistan") codeOpt.selected = true;
+            codeDropdown.appendChild(codeOpt);
+
+            let textOpt = document.createElement('option');
+            textOpt.value = item.name;
+            textOpt.textContent = item.name;
+            if(item.name === "Pakistan") textOpt.selected = true;
+            countryDropdown.appendChild(textOpt);
+        });
+    </script>
+</body>
+</html>
