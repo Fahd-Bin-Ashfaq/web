@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tazeem Akhtar - Build a purpose-driven wellness business from home. Help people feel better and create flexible income with training and mentorship.">
     <title>Tazeem Akhtar - Build A Purpose-Driven Wellness Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         /* === RESET & CSS VARIABLES === */
         * {
@@ -14,24 +17,26 @@
         }
 
         :root {
-            --primary-blue: #000c66;
-            --btn-blue: #00008b;
-            --btn-hover: #0000b3;
-            --bg-light: #e0f2fe;
-            --bg-gradient: linear-gradient(180deg, #dbeafe 0%, #eff6ff 100%);
-            --text-dark: #0f172a;
-            --text-muted: #475569;
-            --border-light: #bae6fd;
+            --primary-blue: #0080b3;
+            --blue-dark: #0a1e47;
+            --blue-deep: #14316b;
+            --btn-blue: #0080b3;
+            --btn-hover: #006a96;
+            --bg-light: #f8fafc;
+            --bg-gradient: linear-gradient(160deg, #0a1e47 0%, #14316b 50%, #1a4a8a 100%);
+            --text-dark: #1a1a1a;
+            --text-muted: #64748b;
+            --border-light: #e2e8f0;
             --card-border: #e2e8f0;
             --white: #ffffff;
-            --shadow-sm: 0 4px 10px rgba(0, 12, 102, 0.25);
-            --shadow-md: 0 8px 25px rgba(0, 12, 102, 0.12);
-            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.18);
             --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 50px;
-            --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            --transition: 0.3s ease;
+            --radius-md: 16px;
+            --radius-lg: 9999px;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --transition: 0.25s ease;
         }
 
         html {
@@ -80,7 +85,7 @@
         .btn-apply:hover {
             transform: translateY(-3px);
             background-color: var(--btn-hover);
-            box-shadow: 0 6px 20px rgba(0, 0, 139, 0.4), 0 0 10px rgba(0, 0, 139, 0.15);
+            box-shadow: 0 6px 20px rgba(0, 128, 179, 0.4), 0 0 10px rgba(0, 128, 179, 0.15);
         }
 
         .btn-apply:active {
@@ -100,10 +105,11 @@
             background: var(--bg-gradient);
             text-align: center;
             padding: 40px 20px 50px;
+            color: var(--white);
         }
 
         .hero-brand {
-            color: var(--primary-blue);
+            color: #5bc4f5;
             font-size: 1.6rem;
             font-weight: 900;
             text-transform: uppercase;
@@ -116,14 +122,14 @@
             font-size: 1.6rem;
             font-weight: 900;
             line-height: 1.25;
-            color: #000000;
+            color: var(--white);
             max-width: 870px;
             margin: 0 auto 15px;
         }
 
         .hero-section .subtitle {
             font-size: 0.95rem;
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.82);
             max-width: 850px;
             margin: 0 auto 25px;
             font-weight: 500;
@@ -154,10 +160,14 @@
 
         .video-caption {
             font-size: 0.9rem;
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.65);
             font-style: italic;
             margin-bottom: 25px;
             line-height: 1.5;
+        }
+
+        .hero-section .btn-meta {
+            color: rgba(255, 255, 255, 0.65);
         }
 
         /* === SECTION 2 & 3: SPLIT GRID === */
@@ -166,7 +176,7 @@
         }
 
         .reverse-split-section {
-            background: linear-gradient(180deg, #eff6ff 0%, #e0f2fe 100%);
+            background: var(--bg-light);
         }
 
         .split-grid {
@@ -217,19 +227,21 @@
 
         /* === SECTION 4: PLAN === */
         .plan-section {
-            background-color: var(--white);
+            background-color: var(--blue-dark);
             text-align: center;
+            color: var(--white);
         }
 
         .plan-section h2 {
             font-size: 1.6rem;
             font-weight: 800;
             margin-bottom: 22px;
+            color: var(--white);
         }
 
         .plan-box {
-            background: linear-gradient(180deg, #dbeafe 0%, #eff6ff 100%);
-            border: 2px solid var(--border-light);
+            background: rgba(255, 255, 255, 0.07);
+            border: 2px solid rgba(255, 255, 255, 0.15);
             border-radius: var(--radius-md);
             max-width: 1200px;
             margin: 0 auto;
@@ -243,7 +255,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-bottom: 20px;
-            color: var(--primary-blue);
+            color: #5bc4f5;
         }
 
         .plan-graphic-placeholder {
@@ -255,7 +267,7 @@
         }
 
         .plan-footer-text {
-            color: var(--text-dark);
+            color: rgba(255, 255, 255, 0.82);
             font-size: 0.95rem;
             margin: 20px auto 20px;
             max-width: 750px;
@@ -263,33 +275,40 @@
         }
 
         .plan-bullets {
-            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 480px;
+            margin: 0 auto 30px;
             text-align: left;
-            margin-bottom: 25px;
         }
 
         .plan-bullets li {
             list-style: none;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             display: flex;
             align-items: center;
             gap: 10px;
-            color: var(--text-dark);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .sub-bullet {
             padding-left: 25px;
             font-size: 0.85rem !important;
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.65);
             font-weight: 400 !important;
             text-align: left;
         }
 
+        .plan-section .btn-meta {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
         /* === SECTION 5: WHY NOW === */
         .why-now-section {
-            background-color: var(--white);
+            background-color: var(--bg-light);
             text-align: center;
         }
 
@@ -325,7 +344,7 @@
 
         .card-item:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 12, 102, 0.1);
+            box-shadow: 0 6px 20px rgba(0, 128, 179, 0.15);
             border-color: var(--btn-blue);
         }
 
@@ -350,7 +369,7 @@
 
         /* === SECTION 6: GALLERY === */
         .gallery-section {
-            background: linear-gradient(180deg, #eff6ff 0%, #e0f2fe 100%);
+            background: var(--white);
             text-align: center;
         }
 
@@ -430,7 +449,7 @@
 
         /* Form Panel */
         .embedded-form-panel {
-            background-color: #03004b;
+            background-color: var(--blue-dark);
             color: var(--white);
             border-radius: var(--radius-md);
             padding: 30px 20px;
@@ -559,7 +578,8 @@
 
         /* === FOOTER / DISCLAIMER === */
         .disclaimer-bar {
-            background-color: #0284c7;
+            background-color: #f1f5f9;
+            border-top: 1px solid var(--border-light);
             padding: 35px 20px;
             text-align: center;
         }
@@ -568,12 +588,12 @@
             max-width: 650px;
             margin: 0 auto;
             font-size: 0.8rem;
-            color: #f0f9ff;
+            color: var(--text-muted);
             line-height: 1.7;
         }
 
         .disclaimer-bar strong {
-            color: var(--white);
+            color: var(--text-dark);
         }
 
         /* ============================================================ */
@@ -702,13 +722,6 @@
                 padding: 40px 30px;
             }
 
-            .reverse-split-section .split-grid {
-                direction: rtl;
-            }
-
-            .reverse-split-section .split-grid > * {
-                direction: ltr;
-            }
         }
 
         /* ============================================================ */
@@ -727,13 +740,200 @@
                 font-size: 2.2rem;
             }
         }
+        /* === WHATSAPP FLOATING BUTTON === */
+        .wa-float {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            transition: transform var(--transition), box-shadow var(--transition);
+            text-decoration: none;
+        }
+        .wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.6);
+        }
+        .wa-float::before {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 3px solid rgba(37, 211, 102, 0.4);
+            animation: wa-pulse 2s ease-out infinite;
+        }
+        @keyframes wa-pulse {
+            0%   { transform: scale(1);   opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        .wa-tooltip {
+            position: absolute;
+            right: 68px;
+            background: #111;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition);
+        }
+        .wa-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            transform: translateY(-50%);
+            border: 6px solid transparent;
+            border-left-color: #111;
+            border-right: 0;
+        }
+        .wa-float:hover .wa-tooltip { opacity: 1; }
+
+        /* === STICKY BOTTOM BAR === */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 998;
+            background: var(--blue-dark);
+            border-top: 2px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.875rem 1.25rem;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+            transform: translateY(100%);
+            transition: transform 0.35s ease;
+        }
+        .sticky-bar.visible {
+            transform: translateY(0);
+        }
+        .sticky-text {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .sticky-btn {
+            background: var(--btn-blue);
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 20px;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: background var(--transition);
+        }
+        .sticky-btn:hover { background: var(--btn-hover); }
+
+        /* === SCROLL REVEAL === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* === FAQ SECTION === */
+        .faq-section {
+            background: var(--bg-light);
+            padding: 50px 20px;
+        }
+        .faq-section h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.625rem;
+        }
+        .faq-item {
+            background: var(--white);
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            transition: border-color var(--transition);
+        }
+        .faq-item[open] { border-color: var(--btn-blue); }
+        .faq-item summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1rem 3rem 1rem 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            position: relative;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after {
+            content: '';
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-65%) rotate(45deg);
+            width: 9px;
+            height: 9px;
+            border-right: 2.5px solid var(--btn-blue);
+            border-bottom: 2.5px solid var(--btn-blue);
+            transition: transform var(--transition);
+        }
+        .faq-item[open] summary::after {
+            transform: translateY(-25%) rotate(225deg);
+        }
+        .faq-item p {
+            padding: 0 1.25rem 1.25rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        @media (min-width: 600px) {
+            .faq-section { padding: 60px 30px; }
+            .faq-section h2 { font-size: 1.8rem; }
+            .sticky-bar { justify-content: center; gap: 2rem; padding: 1rem 2rem; }
+            .sticky-btn { font-size: 0.9rem; padding: 12px 28px; }
+            .wa-float { bottom: 100px; }
+        }
+        @media (min-width: 900px) {
+            .faq-section { padding: 70px 40px; }
+        }
     </style>
 </head>
 <body>
 
     <section class="hero-section section-padding">
         <div class="container">
-            <div class="hero-brand"> Tazeem Akhtar</div>
+            <div class="hero-brand">Tazeem Akhtar</div>
             <h1>Build A Purpose-Driven Wellness Business From Home</h1>
             <p class="subtitle">Help people feel better, share a simple health system, and create flexible income even if you've never built a business before.</p>
             
@@ -754,10 +954,10 @@
     <section class="split-feature-section section-padding">
         <div class="container">
             <div class="split-grid">
-                <div class="split-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600" alt="Tazeem Akhtar Portrait">
+                <div class="split-image reveal">
+                    <img src="UTILITES/b4.jpeg" alt="Tazeem Akhtar Portrait">
                 </div>
-                <div class="split-content">
+                <div class="split-content reveal">
                     <h2>Why This Business Works</h2>
                     <p>We're living in a health crisis. Nearly everyone is dealing with gut issues, low energy, hormonal imbalance, or metabolic problems and they're actively searching for solutions that feel simple and natural.</p>
                     <p>This business works because you're not selling hype. You're sharing education and a proven, food-based system that people can actually stick with.</p>
@@ -780,10 +980,10 @@
     <section class="reverse-split-section section-padding">
         <div class="container">
             <div class="split-grid">
-                <div class="split-content">
-                    <h2>I Never Dreamed Of Being An Entrepreneur I Just Wanted To Feel Better</h2>
+                <div class="split-content reveal">
+                    <h2>I Never Dreamed Of Being An Entrepreneur, I Just Wanted To Feel Better</h2>
                     <p>When I joined this business, I thought I'd only help a few people. But very quickly, I realized how many people around me were struggling with their health.</p>
-                    <p>As a stay-at-home mom, I always wanted to do something of my own something meaningful. This gave me purpose, direction, and a mission.</p>
+                    <p>As a stay-at-home mom, I always wanted to do something of my own — something meaningful. This gave me purpose, direction, and a mission.</p>
                     
                     <ul class="bullets-list">
                         <li>👉 A sense of purpose and impact</li>
@@ -796,8 +996,8 @@
                     <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
                     <div class="btn-meta">No experience required • Training and mentorship included</div>
                 </div>
-                <div class="split-image">
-                    <img src="https://images.unsplash.com/photo-1580894732444-8fecef2271ff?q=80&w=600" alt="Tazeem Akhtar at Event">
+                <div class="split-image reveal">
+                    <img src="UTILITES/b5.jpeg" alt="Tazeem Akhtar at Event">
                 </div>
             </div>
         </div>
@@ -805,9 +1005,10 @@
 
     <section class="plan-section section-padding">
         <div class="container">
-            <div class="plan-box">
-                <h3>The Plug & Play Plan</h3>
-                <img src="./UTILITES/ufeel.webp" alt="The Plug & Play Plan Resources" class="plan-graphic-placeholder">
+            <h2>The Plug & Play Plan</h2>
+            <div class="plan-box reveal">
+                <h3>Everything You Need To Get Started</h3>
+                <img src="./UTILITES/plug.jpeg" alt="The Plug & Play Plan Resources" class="plan-graphic-placeholder">
                 
                 <p class="plan-footer-text">You'll be shown exactly how to share, support, and grow step-by-step with guidance.</p>
                 
@@ -818,10 +1019,9 @@
                     <li>👉 Community support</li>
                     <li>👉 Ongoing guidance as you grow</li>
                     <li>👉 A clear path for beginners</li>
-                    <li>👉 You don't have to be perfect  just willing to learn.</li>
+                    <li>👉 You don't have to be perfect — just willing to learn.</li>
                 </ul>
                 
-                <br><br>
                 <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
                 <div class="btn-meta">No experience required • Training and mentorship included</div>
             </div>
@@ -834,17 +1034,17 @@
             <p class="subtitle">Three major shifts are creating the perfect moment to start — and you can leverage all of them today.</p>
             
             <div class="cards-grid">
-                <div class="card-item">
+                <div class="card-item reveal">
                     <span class="card-icon">🩺</span>
                     <h3>Health Crisis</h3>
                     <p>93% of adults are metabolically unhealthy and actively searching for real, natural solutions they can maintain.</p>
                 </div>
-                <div class="card-item">
+                <div class="card-item reveal">
                     <span class="card-icon">📊</span>
                     <h3>Economic Crisis</h3>
                     <p>Rising costs and shrinking job security make flexible income more important than ever.</p>
                 </div>
-                <div class="card-item">
+                <div class="card-item reveal">
                     <span class="card-icon">💻</span>
                     <h3>Technology Shift</h3>
                     <p>Digital systems and automation allow you to build without starting from scratch.</p>
@@ -859,7 +1059,7 @@
     <section class="gallery-section section-padding">
         <div class="container">
             <h2>What This Business Has Made Possible</h2>
-            <p>This business gave me more than income — it gave me confidence, purpose, and the ability to help people every day while building something of my own.</p>
+            <p>This business gave me more than income. It gave me confidence, purpose, and the ability to help people every day while building something of my own.</p>
             
             <div class="gallery-grid">
                 <div class="gallery-item"><img src="UTILITES/b3.jpeg" alt="Community 1"></div>
@@ -873,12 +1073,40 @@
         </div>
     </section>
 
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details class="faq-item reveal">
+                    <summary>Do I need sales or business experience to start?</summary>
+                    <p>No experience is required. You'll receive step-by-step training, mentorship, and all the tools you need to get started, even if you've never run a business before.</p>
+                </details>
+                <details class="faq-item reveal">
+                    <summary>How much time do I need to commit each week?</summary>
+                    <p>This business is designed to work around your life. Many people start part-time, just a few hours a week, and grow from there. You set your own pace.</p>
+                </details>
+                <details class="faq-item reveal">
+                    <summary>What does it cost to get started?</summary>
+                    <p>Getting started is simple and low-cost compared to traditional businesses. There is no inventory to buy, no office needed, and no employees to manage. Fill out the form and we'll walk you through everything.</p>
+                </details>
+                <details class="faq-item reveal">
+                    <summary>How do I earn income from this?</summary>
+                    <p>You earn by helping others get started with the same health system. The more people you support, the more you can grow your income. It's a flexible, performance-based model.</p>
+                </details>
+                <details class="faq-item reveal">
+                    <summary>What kind of support will I get from Tazeem?</summary>
+                    <p>You'll get personal mentorship, access to a community, proven sharing tools, and ongoing guidance. You won't be doing this alone — support is built into the system.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <section class="footer-cta-section section-padding" id="form-gEkWiWcW4K">
         <div class="container">
             <div class="cta-split">
                 <div class="cta-left">
                     <h2>Ready To Build Freedom Helping People Get Healthy?</h2>
-                    <p>If you've been wanting something meaningful — something that helps others and helps you grow — this could be your next step.</p>
+                    <p>If you've been wanting something meaningful, something that helps others and helps you grow, this could be your next step.</p>
                     <p>No pressure. No hard selling. Just a real conversation.</p>
                     
                     <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
@@ -886,7 +1114,7 @@
                 </div>
                 
                 <div class="embedded-form-panel">
-                    <form action="https://healthmona.com/business#form-gEkWiWcW4K" method="POST">
+                    <form id="businessForm">
                         <div class="form-field">
                             <label>Full Name *</label>
                             <input type="text" name="fullName" placeholder="Full Name" required>
@@ -895,7 +1123,7 @@
                         <div class="form-field">
                             <label>Phone *</label>
                             <div class="phone-input-wrapper">
-                                <select class="country-code-select" name="countryCode"></select>
+                                <select id="formPhoneCode" class="country-code-select" name="countryCode"></select>
                                 <input type="text" name="phone" placeholder="Phone Number" required>
                             </div>
                         </div>
@@ -938,7 +1166,20 @@
 
     <footer class="disclaimer-bar">
         <p><strong>Disclaimer:</strong> This page is for educational purposes only and is not medical advice. Individual results vary. Always consult your healthcare provider before making changes to your routine.</p>
+        <p style="margin-top: 12px; font-size: 0.75rem; color: var(--text-muted);">&copy; Tazeem Akhtar &mdash; All Rights Reserved</p>
     </footer>
+
+    <a href="https://wa.me/447349334819" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp Me">
+        <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        <span class="wa-tooltip">WhatsApp Me</span>
+    </a>
+
+    <div class="sticky-bar" id="stickyBar">
+        <p class="sticky-text">Training & Mentorship Included</p>
+        <a href="#form-gEkWiWcW4K" class="sticky-btn">Apply To Work With Me</a>
+    </div>
 
     <script>
         // 1. Smooth Scrolling Script
@@ -1048,6 +1289,52 @@
         codeDropdown.innerHTML = '';
         countryDropdown.innerHTML = '<option value="" disabled selected>Select your country</option>';
 
+        // 3. WhatsApp Form Submit
+        document.getElementById('businessForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name    = this.fullName.value.trim();
+            const code    = this.countryCode.value;
+            const phone   = this.phone.value.trim();
+            const email   = this.email.value.trim();
+            const country = this.country.value;
+            const reason  = this.reason.value.trim();
+
+            const msg =
+                `*New Business Application*\n\n` +
+                `👤 *Name:* ${name}\n` +
+                `📞 *Phone:* ${code} ${phone}\n` +
+                `📧 *Email:* ${email}\n` +
+                `🌍 *Country:* ${country}\n` +
+                `💬 *Reason:* ${reason || 'Not provided'}`;
+
+            const waURL = `https://wa.me/447349334819?text=${encodeURIComponent(msg)}`;
+            window.open(waURL, '_blank');
+        });
+
+        // 4. Scroll Reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealEls.forEach(el => revealObserver.observe(el));
+
+        // 5. Sticky Bar
+        const stickyBar = document.getElementById('stickyBar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                stickyBar.classList.add('visible');
+            } else {
+                stickyBar.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        // 6. Injecting data instantly
         globalCountries.forEach(item => {
             let codeOpt = document.createElement('option');
             codeOpt.value = item.code;
