@@ -13,16 +13,6 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ── Video Sound Toggle ─────────────────────────────────────
-document.querySelectorAll('.sound-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const video = btn.closest('.video-card').querySelector('video');
-    if (!video) return;
-    video.muted = !video.muted;
-    btn.textContent = video.muted ? '🔇 Sound' : '🔊 Sound';
-    btn.dataset.muted = video.muted;
-  });
-});
 
 // ── Button Press Feedback ──────────────────────────────────
 document.querySelectorAll('.btn').forEach(btn => {
