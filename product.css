@@ -227,12 +227,15 @@ ul { list-style: none; }
 }
 
 .video-wrap {
+  position: relative;
   width: 100%;
   max-width: 340px;
   margin: 0 auto 2rem;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  padding-bottom: 56.25%;
+  height: 0;
 }
 .video-wrap video {
   width: 100%;
