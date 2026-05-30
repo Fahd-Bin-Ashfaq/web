@@ -28,3 +28,24 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+// ── Infinite Logos Marquee ─────────────────────────────────
+window.addEventListener('load', function () {
+  const track = document.querySelector('.logos-track');
+  if (!track) return;
+
+  track.style.animation = 'none';
+  track.style.transform  = 'translateX(0)';
+
+  const halfWidth = track.scrollWidth / 2;
+  let x = 0;
+
+  function marquee() {
+    x -= 1.2;
+    if (-x >= halfWidth) x += halfWidth;
+    track.style.transform = 'translateX(' + x + 'px)';
+    requestAnimationFrame(marquee);
+  }
+
+  requestAnimationFrame(marquee);
+});

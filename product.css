@@ -234,8 +234,7 @@ ul { list-style: none; }
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  padding-bottom: 56.25%;
-  height: 0;
+  aspect-ratio: 9 / 16;
 }
 .video-wrap video,
 .video-wrap iframe {
@@ -597,7 +596,6 @@ ul { list-style: none; }
 .video-col .video-wrap {
   max-width: 100%;
   margin: 0;
-  padding-bottom: 177.78%;
 }
 @media (min-width: 768px) {
   .videos-grid { grid-template-columns: repeat(3, 1fr); }
