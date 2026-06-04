@@ -3,3 +3,7 @@
 *.mov
 *.avi
 *.mkv
+# Allow small testimonial videos
+!UTILITES/video1.mp4
+!UTILITES/video2.mp4
+!UTILITES/video3.mp4
