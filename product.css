@@ -327,7 +327,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   width: max-content;
-  animation: scroll-logos 32s linear infinite;
+  animation: scroll-logos 12s linear infinite;
   will-change: transform;
 }
 
@@ -335,7 +335,6 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: clamp(2.5rem, 6vw, 5.5rem);
-  padding-right: clamp(2.5rem, 6vw, 5.5rem);
 }
 
 .logo-img {
@@ -346,8 +345,8 @@ ul { list-style: none; }
 }
 
 @keyframes scroll-logos {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translateX(100vw); }
+  to   { transform: translateX(-100%); }
 }
 
 /* ═══════════════════════════════════════════════════════════
