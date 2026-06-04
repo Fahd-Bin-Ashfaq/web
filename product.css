@@ -284,33 +284,19 @@ ul { list-style: none; }
    LOGOS SCROLL
 ═══════════════════════════════════════════════════════════ */
 .logos-section {
-  padding: 2.75rem 0;
+  padding: 2.5rem 0;
   background: var(--white);
   text-align: center;
   overflow: hidden;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
 .logos-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  color: var(--text-muted);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #555;
   text-transform: uppercase;
-  margin-bottom: 1.75rem;
-}
-.logos-label::before,
-.logos-label::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 1px;
-  background: var(--border);
+  margin-bottom: 1.5rem;
 }
 
 .logos-track-wrap {
@@ -353,15 +339,10 @@ ul { list-style: none; }
 }
 
 .logo-img {
-  height: clamp(32px, 4vw, 52px);
+  height: clamp(44px, 6vw, 72px);
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
-  filter: grayscale(1) opacity(0.45);
-  transition: filter 0.3s ease;
-}
-.logo-img:hover {
-  filter: grayscale(0) opacity(1);
 }
 
 @keyframes scroll-logos {
