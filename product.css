@@ -327,14 +327,16 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   width: max-content;
-  animation: scroll-logos 12s linear infinite;
+  animation: scroll-logos 20s linear infinite;
   will-change: transform;
 }
 
 .logos-set {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: clamp(2.5rem, 6vw, 5.5rem);
+  padding-right: clamp(2.5rem, 6vw, 5.5rem);
 }
 
 .logo-img {
@@ -345,8 +347,8 @@ ul { list-style: none; }
 }
 
 @keyframes scroll-logos {
-  from { transform: translateX(100vw); }
-  to   { transform: translateX(-100%); }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ═══════════════════════════════════════════════════════════
