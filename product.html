@@ -78,7 +78,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="product.css">
 </head>
 <body>
@@ -94,7 +95,7 @@
 
     <div class="video-wrap">
       <iframe
-        src="https://streamable.com/e/5j56me"
+        data-src="https://streamable.com/e/5j56me"
         frameborder="0"
         allowfullscreen
         allow="autoplay"
@@ -118,21 +119,21 @@
     <div class="logos-track">
       <!-- Original set -->
       <div class="logos-set">
-        <img src="https://tukuz.com/wp-content/uploads/2019/12/health-canada-logo-vector.png"            alt="Health Canada"  class="logo-img">
-        <img src="https://mycolotest.com/wp-content/uploads/2023/12/cleveland-clinic-logo.png"           alt="Cleveland Clinic" class="logo-img">
-        <img src="https://mppl.org/wp-content/uploads/2018/08/PDR-logo-purple.png"                      alt="PDR"            class="logo-img">
-        <img src="https://cdn.freebiesupply.com/logos/large/2x/fda-logo-black-and-white.png"             alt="FDA"            class="logo-img">
-        <img src="https://e7.pngegg.com/pngimages/548/880/png-clipart-gmp-logo-good-manufacturing-practice-logo-certification-good-manufacturing-practice-text-monochrome.png" alt="GMP" class="logo-img">
-        <img src="https://www.logotypes101.com/logos/437/0E1B25E0377A35AF47EB40C76466AA3C/university_of_sydney__2.png" alt="University of Sydney" class="logo-img">
+        <img src="https://tukuz.com/wp-content/uploads/2019/12/health-canada-logo-vector.png"            alt="Health Canada"  loading="lazy" class="logo-img">
+        <img src="https://mycolotest.com/wp-content/uploads/2023/12/cleveland-clinic-logo.png"           alt="Cleveland Clinic" loading="lazy" class="logo-img">
+        <img src="https://mppl.org/wp-content/uploads/2018/08/PDR-logo-purple.png"                      alt="PDR"            loading="lazy" class="logo-img">
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/fda-logo-black-and-white.png"             alt="FDA"            loading="lazy" class="logo-img">
+        <img src="https://e7.pngegg.com/pngimages/548/880/png-clipart-gmp-logo-good-manufacturing-practice-logo-certification-good-manufacturing-practice-text-monochrome.png" alt="GMP" loading="lazy" class="logo-img">
+        <img src="https://www.logotypes101.com/logos/437/0E1B25E0377A35AF47EB40C76466AA3C/university_of_sydney__2.png" alt="University of Sydney" loading="lazy" class="logo-img">
       </div>
       <!-- Duplicate set — makes loop seamless -->
       <div class="logos-set" aria-hidden="true">
-        <img src="https://tukuz.com/wp-content/uploads/2019/12/health-canada-logo-vector.png"            alt="" class="logo-img">
-        <img src="https://mycolotest.com/wp-content/uploads/2023/12/cleveland-clinic-logo.png"           alt="" class="logo-img">
-        <img src="https://mppl.org/wp-content/uploads/2018/08/PDR-logo-purple.png"                      alt="" class="logo-img">
-        <img src="https://cdn.freebiesupply.com/logos/large/2x/fda-logo-black-and-white.png"             alt="" class="logo-img">
-        <img src="https://e7.pngegg.com/pngimages/548/880/png-clipart-gmp-logo-good-manufacturing-practice-logo-certification-good-manufacturing-practice-text-monochrome.png" alt="" class="logo-img">
-        <img src="https://www.logotypes101.com/logos/437/0E1B25E0377A35AF47EB40C76466AA3C/university_of_sydney__2.png" alt="" class="logo-img">
+        <img src="https://tukuz.com/wp-content/uploads/2019/12/health-canada-logo-vector.png"            alt="" loading="lazy" class="logo-img">
+        <img src="https://mycolotest.com/wp-content/uploads/2023/12/cleveland-clinic-logo.png"           alt="" loading="lazy" class="logo-img">
+        <img src="https://mppl.org/wp-content/uploads/2018/08/PDR-logo-purple.png"                      alt="" loading="lazy" class="logo-img">
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/fda-logo-black-and-white.png"             alt="" loading="lazy" class="logo-img">
+        <img src="https://e7.pngegg.com/pngimages/548/880/png-clipart-gmp-logo-good-manufacturing-practice-logo-certification-good-manufacturing-practice-text-monochrome.png" alt="" loading="lazy" class="logo-img">
+        <img src="https://www.logotypes101.com/logos/437/0E1B25E0377A35AF47EB40C76466AA3C/university_of_sydney__2.png" alt="" loading="lazy" class="logo-img">
       </div>
     </div>
   </div>
@@ -297,17 +298,17 @@
     <div class="videos-grid">
       <div class="video-col">
         <div class="video-wrap">
-          <video src="UTILITES/video1.mp4" controls playsinline style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;object-fit:cover;"></video>
+          <video src="UTILITES/video1.mp4" controls playsinline preload="none" style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;object-fit:cover;"></video>
         </div>
       </div>
       <div class="video-col">
         <div class="video-wrap">
-          <video src="UTILITES/video2.mp4" controls playsinline style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;object-fit:cover;"></video>
+          <video src="UTILITES/video2.mp4" controls playsinline preload="none" style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;object-fit:cover;"></video>
         </div>
       </div>
       <div class="video-col">
         <div class="video-wrap">
-          <video src="UTILITES/video3.mp4" controls playsinline style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;object-fit:cover;"></video>
+          <video src="UTILITES/video3.mp4" controls playsinline preload="none" style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;object-fit:cover;"></video>
         </div>
       </div>
     </div>
@@ -508,5 +509,12 @@
 </div>
 
 <script src="product-script.js"></script>
+<script>
+  window.addEventListener('load', function () {
+    document.querySelectorAll('iframe[data-src]').forEach(function (el) {
+      el.src = el.dataset.src;
+    });
+  });
+</script>
 </body>
 </html>
