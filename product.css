@@ -284,19 +284,33 @@ ul { list-style: none; }
    LOGOS SCROLL
 ═══════════════════════════════════════════════════════════ */
 .logos-section {
-  padding: 2.5rem 0;
-  background: var(--off-white);
+  padding: 2.75rem 0;
+  background: var(--white);
   text-align: center;
   overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .logos-label {
-  font-size: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: .68rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   color: var(--text-muted);
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+.logos-label::before,
+.logos-label::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--border);
 }
 
 .logos-track-wrap {
@@ -310,39 +324,44 @@ ul { list-style: none; }
   position: absolute;
   top: 0;
   bottom: 0;
-  width: clamp(40px, 8vw, 120px);
+  width: clamp(40px, 8vw, 140px);
   z-index: 2;
   pointer-events: none;
 }
 .logos-track-wrap::before {
   left: 0;
-  background: linear-gradient(to right, var(--off-white), transparent);
+  background: linear-gradient(to right, var(--white), transparent);
 }
 .logos-track-wrap::after {
   right: 0;
-  background: linear-gradient(to left, var(--off-white), transparent);
+  background: linear-gradient(to left, var(--white), transparent);
 }
 
 .logos-track {
   display: flex;
   align-items: center;
   width: max-content;
-  animation: scroll-logos 28s linear infinite;
+  animation: scroll-logos 32s linear infinite;
   will-change: transform;
 }
 
 .logos-set {
   display: flex;
   align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
-  padding-right: clamp(2rem, 5vw, 5rem);
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  padding-right: clamp(2.5rem, 6vw, 5.5rem);
 }
 
 .logo-img {
-  height: clamp(36px, 5vw, 64px);
+  height: clamp(32px, 4vw, 52px);
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
+  filter: grayscale(1) opacity(0.45);
+  transition: filter 0.3s ease;
+}
+.logo-img:hover {
+  filter: grayscale(0) opacity(1);
 }
 
 @keyframes scroll-logos {
