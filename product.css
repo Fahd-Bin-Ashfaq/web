@@ -310,7 +310,7 @@ ul { list-style: none; }
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 80px;
+  width: clamp(40px, 8vw, 120px);
   z-index: 2;
   pointer-events: none;
 }
@@ -326,19 +326,17 @@ ul { list-style: none; }
 .logos-track {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: clamp(2rem, 5vw, 5rem);
   width: max-content;
-  animation: scroll-logos 26s linear infinite;
+  animation: scroll-logos 28s linear infinite;
+  will-change: transform;
 }
 
 .logo-img {
-  height: 44px;
+  height: clamp(36px, 5vw, 64px);
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
-}
-@media (min-width: 768px) {
-  .logo-img { height: 64px; }
 }
 
 @keyframes scroll-logos {
