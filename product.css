@@ -326,10 +326,16 @@ ul { list-style: none; }
 .logos-track {
   display: flex;
   align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
   width: max-content;
   animation: scroll-logos 28s linear infinite;
   will-change: transform;
+}
+
+.logos-set {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-right: clamp(2rem, 5vw, 5rem);
 }
 
 .logo-img {
