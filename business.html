@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Start a Purpose-Driven Wellness Business from Homeuild a purpose-driven wellness business from home with Tazeem Akhtar. Help people feel better, earn flexible income, and get full training and mentorship. No experience required.">
+    <meta name="description" content="Start a purpose-driven wellness business from home with Tazeem Akhtar. Help people feel better, earn flexible income, and get full training and mentorship. No experience required.">
+    <meta name="keywords" content="wellness business from home, purpose-driven business, Tazeem Akhtar, home business opportunity, wellness mentor, health business, flexible income, work from home wellness">
     <title>Start a Purpose-Driven Wellness Business from Home | Tazeem Akhtar</title>
 
     <!-- Canonical -->
@@ -195,29 +196,29 @@
             line-height: 1.5;
         }
 
-        /* Video Container */
-        .video-container {
-            max-width: 850px;
-            margin: 0 auto 20px;
-            border: 5px solid var(--white);
-            box-shadow: var(--shadow-lg);
-            border-radius: var(--radius-sm);
-            background: #000000;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .video-player {
+        /* Video Wrap (mobile-first portrait embed) */
+        .video-wrap {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            max-width: 340px;
+            margin: 0 auto 20px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            aspect-ratio: 9 / 16;
             background: #000;
         }
+        .video-wrap iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
 
-        .video-caption {
+        .video-wrap-caption {
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.65);
             font-style: italic;
@@ -1005,14 +1006,17 @@
             <h1>Start a Purpose-Driven Wellness Business from Home </h1>
             <p class="subtitle">Make a positive impact by helping individuals improve their health and well-being through a proven wellness system. Develop a flexible, home-based business and generate sustainable income, regardless of your previous business experience.</p>
             
-            <div class="video-container">
-                <video class="video-player" controls preload="metadata">
-                    <source src="./UTILITES/busnies1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="video-wrap">
+                <iframe
+                  src="https://streamable.com/e/mp1k1j"
+                  frameborder="0"
+                  allowfullscreen
+                  allow="autoplay"
+                  style="width:100%;height:100%;position:absolute;top:0;left:0;">
+                </iframe>
             </div>
             
-            <p class="video-caption">How I went from stay-at-home mom to building something of my own — with purpose and flexibility.</p>
+            <p class="video-wrap-caption">How I went from stay-at-home mom to building something of my own — with purpose and flexibility.</p>
             
             <a href="#form-gEkWiWcW4K" class="btn-apply">Apply To Work With Me</a>
             <div class="btn-meta">No experience required • Training and mentorship included</div>
